@@ -1,0 +1,21 @@
+version: '3'
+services:
+      nbench1:
+        image: ritika:latest
+        build: 
+            context: .
+            dockerfile: dockerfile
+        container_name: con1
+        volumes:
+          -   .:/aes
+        command: ./main64
+              
+      nbench2:
+        image: ritika:latest
+        build:
+            context: .
+            dockerfile: dockerfile
+        container_name: con2
+        volumes:
+          -   .:/aes
+        command: ./main64
